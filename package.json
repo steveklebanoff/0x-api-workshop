@@ -1,4 +1,8 @@
 {
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "tsc && node ./build/index.js"
+  },
   "devDependencies": {
     "typescript": "^3.8.3"
   },
