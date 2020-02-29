@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@0x/contract-wrappers": "^13.6.2",
+    "@0x/subproviders": "^6.0.8",
+    "@0x/web3-wrapper": "^7.0.7"
+  }
+}
