@@ -1,6 +1,6 @@
 import { checkAndSetAllowance } from "./allowances";
 import { ContractWrappers } from "@0x/contract-wrappers";
-import { NETWORK_ID, SELL_TOKEN } from "./constants";
+import { NETWORK_ID, SELL_TOKEN_ADDRESS } from "./constants";
 import { getProviderEngine } from "./provider";
 
 const start = async () => {
@@ -9,7 +9,11 @@ const start = async () => {
     chainId: NETWORK_ID
   });
 
-  await checkAndSetAllowance(SELL_TOKEN, contractWrappers, providerEngine);
+  await checkAndSetAllowance(
+    SELL_TOKEN_ADDRESS,
+    contractWrappers,
+    providerEngine
+  );
 };
 
 start()
