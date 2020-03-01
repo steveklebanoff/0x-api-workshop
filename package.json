@@ -4,12 +4,15 @@
     "dev": "tsc && node ./build/index.js"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.149",
     "@types/web3": "1.0.20",
     "typescript": "^3.8.3"
   },
   "dependencies": {
     "@0x/contract-wrappers": "^13.6.2",
     "@0x/subproviders": "^6.0.8",
-    "@0x/web3-wrapper": "^7.0.7"
+    "@0x/web3-wrapper": "^7.0.7",
+    "axios": "^0.19.2",
+    "lodash": "^4.17.15"
   }
 }

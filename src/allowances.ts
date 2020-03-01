@@ -1,13 +1,6 @@
 import { PUBLIC_KEY } from "./constants";
 import { ERC20TokenContract, ContractWrappers } from "@0x/contract-wrappers";
-import { TxData, Web3Wrapper } from "@0x/web3-wrapper";
-import {
-  RPCSubprovider,
-  Web3ProviderEngine,
-  PrivateKeyWalletSubprovider,
-  NonceTrackerSubprovider,
-  DebugSubprovider
-} from "@0x/subproviders";
+import { Web3ProviderEngine } from "@0x/subproviders";
 import { BigNumber } from "@0x/utils";
 
 const LOW_ALLOWANCE_IN_WEI = new BigNumber(2).pow(128).minus(1);
