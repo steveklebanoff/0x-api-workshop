@@ -1,17 +1,21 @@
 import { Web3Wrapper } from "@0x/web3-wrapper";
-import { checkAndSetAllowance } from "./allowances";
+import { BigNumber } from "@0x/utils";
 import { ContractWrappers } from "@0x/contract-wrappers";
+
+import { checkAndSetAllowance } from "./allowances";
 import {
   NETWORK_ID,
-  SELL_TOKEN_ADDRESS,
   PUBLIC_KEY,
-  BUY_TOKEN_ADDRESS,
-  SELL_TOKEN_AMOUNT_WEI
 } from "./constants";
 import { getProviderEngine } from "./provider";
 import { trade } from "./trade";
+import { getTokenAddress } from "./tokens";
 
 const start = async () => {
+  const buyTokenAddress = getTokenAddress("MKR");
+  const sellTokenAddress = getTokenAddress("DAI");
+  const sellTokenUnitAmount = 0.25;
+
   // Set up wallet and provider
   const providerEngine = getProviderEngine();
   const contractWrappers = new ContractWrappers(providerEngine, {
@@ -20,13 +24,14 @@ const start = async () => {
   const web3Wrapper = new Web3Wrapper(providerEngine);
 
   // Ensure we have allowances set
-  await checkAndSetAllowance(SELL_TOKEN_ADDRESS, contractWrappers, providerEngine);
+  await checkAndSetAllowance(sellTokenAddress, contractWrappers, providerEngine);
 
   // Send out trade
+  const sellTokenAmountWei = Web3Wrapper.toWei(new BigNumber(sellTokenUnitAmount)).toNumber();
   await trade(
     web3Wrapper, PUBLIC_KEY,
-    { buyTokenAddress: BUY_TOKEN_ADDRESS, sellTokenAddress: SELL_TOKEN_ADDRESS },
-    SELL_TOKEN_AMOUNT_WEI
+    { buyTokenAddress: buyTokenAddress, sellTokenAddress: sellTokenAddress },
+    sellTokenAmountWei
   );
 };
 
