@@ -13,3 +13,12 @@
 - Run `yarn dev`
 
 
+## Follow-up challenges
+
+- Buy another asset
+- Modify code so you can specify a buy amount _or_ a sell amount
+- Send in a custom slippage parameter
+- Ensure wallet has enough funds prior to calling out to 0x API
+- Wait for certain number of block confirmations prior to considering transaction successful
+- Query for exact token changes that occurred after successful transactions
+- Retry X times with X delay if reverts
