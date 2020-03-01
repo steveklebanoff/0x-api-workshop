@@ -1,11 +1,11 @@
 # 0x API Workshop
 
-## Requirements
+## :computer: Requirements
 
 - Ensure you have node 8 or above.  If you don't, I recommend using [nvm](https://github.com/nvm-sh/nvm) to manage multiple node versions
 - Ensure you have [yarn](https://yarnpkg.com/) installed
 
-## Running
+## :running: Running
 
 - Install dependencies: `yarn`
 - `cp .env.example .env` and replace variables with your own
@@ -13,7 +13,7 @@
 - Run `yarn dev`
 
 
-## Follow-up challenges
+## :muscle: Follow-up challenges
 
 - Buy another asset
 - Modify code so you can specify a buy amount _or_ a sell amount
