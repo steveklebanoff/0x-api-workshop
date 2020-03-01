@@ -12,7 +12,7 @@ import { trade } from "./trade";
 import { getTokenAddress } from "./tokens";
 
 const start = async () => {
-  const buyTokenAddress = getTokenAddress("MKR");
+  const buyTokenAddress = getTokenAddress("REP");
   const sellTokenAddress = getTokenAddress("DAI");
   const sellTokenUnitAmount = 0.25;
 

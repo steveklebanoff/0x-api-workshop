@@ -1,7 +1,7 @@
 {
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "tsc && node ./build/index.js"
+    "dev": "tsc && node -r dotenv/config ./build/index.js"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.149",
@@ -13,6 +13,7 @@
     "@0x/subproviders": "^6.0.8",
     "@0x/web3-wrapper": "^7.0.7",
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "lodash": "^4.17.15"
   }
 }
