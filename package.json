@@ -12,7 +12,7 @@
     "@0x/contract-wrappers": "^13.6.2",
     "@0x/subproviders": "^6.0.8",
     "@0x/web3-wrapper": "^7.0.7",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "lodash": "^4.17.15"
   }
